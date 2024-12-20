@@ -4,14 +4,12 @@ from typing import List, Dict
 
 class RiskCalculator:
     """A simple financial risk calculator."""
-
     def __init__(self, data: List[float]):
         """Initialize with historical returns data."""
         self.data = np.array(data)
 
     def calculate_var(self, confidence_level: float = 0.95) -> float:
-        """
-        Calculate Value at Risk (VaR) at the specified confidence level.
+        """Calculate Value at Risk (VaR) at the specified confidence level.
         Args:
             confidence_level: The confidence level for VaR calculation (default: 0.95)
         Returns:
@@ -22,16 +20,14 @@ class RiskCalculator:
         return -np.percentile(self.data, (1 - confidence_level) * 100)
 
     def calculate_volatility(self) -> float:
-        """
-        Calculate historical volatility (standard deviation).
+        """Calculate historical volatility (standard deviation).
         Returns:
             The volatility value
         """
         return np.std(self.data)
 
     def get_risk_metrics(self) -> Dict[str, float]:
-        """
-        Calculate and return multiple risk metrics.
+        """Calculate and return multiple risk metrics.
         Returns:
             Dictionary containing various risk metrics
         """
