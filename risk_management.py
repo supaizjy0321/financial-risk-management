@@ -12,10 +12,8 @@ class RiskCalculator:
     def calculate_var(self, confidence_level: float = 0.95) -> float:
         """
         Calculate Value at Risk (VaR) at the specified confidence level.
-        
         Args:
             confidence_level: The confidence level for VaR calculation (default: 0.95)
-            
         Returns:
             The VaR value
         """
@@ -26,7 +24,6 @@ class RiskCalculator:
     def calculate_volatility(self) -> float:
         """
         Calculate historical volatility (standard deviation).
-        
         Returns:
             The volatility value
         """
@@ -35,7 +32,6 @@ class RiskCalculator:
     def get_risk_metrics(self) -> Dict[str, float]:
         """
         Calculate and return multiple risk metrics.
-        
         Returns:
             Dictionary containing various risk metrics
         """
