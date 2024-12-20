@@ -1,12 +1,4 @@
 numpy>=1.21.0
 pandas>=1.3.0
 pytest>=6.0.0
-flake8
-black
-isort
-bandit
-safety
-pytest
-pytest-cov
-build
-wheel
+flake8>=3.9.0
