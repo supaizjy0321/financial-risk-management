@@ -1,22 +1,23 @@
 # Financial Risk Management Application
 
-A simple Python application for calculating various financial risk metrics.
+A Python application for calculating various financial risk metrics, including Value at Risk (VaR) and volatility measurements.
 
 ## Features
 
-- Value at Risk (VaR) calculation at different confidence levels
-- Historical volatility calculation
-- Basic risk metrics reporting
+* Calculate Value at Risk (VaR) at different confidence levels
+* Compute historical volatility
+* Generate comprehensive risk metrics reports
+* Handle numerical financial data efficiently
 
 ## Installation
 
-1. Clone the repository:
+1. Clone the repository
 ```bash
 git clone https://github.com/yourusername/financial-risk-management.git
 cd financial-risk-management
 ```
 
-2. Install the required packages:
+2. Install required packages
 ```bash
 pip install -r requirements.txt
 ```
@@ -26,30 +27,62 @@ pip install -r requirements.txt
 ```python
 from risk_management import RiskCalculator
 
-# Example data (historical returns)
+# Sample historical returns data
 returns_data = [0.01, -0.02, 0.03, -0.01, 0.02]
 
 # Create a risk calculator instance
-calc = RiskCalculator(returns_data)
+calculator = RiskCalculator(returns_data)
 
 # Calculate VaR at 95% confidence level
-var_95 = calc.calculate_var(0.95)
+var_95 = calculator.calculate_var(0.95)
+print(f"95% VaR: {var_95}")
 
 # Get all risk metrics
-metrics = calc.get_risk_metrics()
+metrics = calculator.get_risk_metrics()
+print("Risk Metrics:", metrics)
+```
+
+## Project Structure
+
+```
+financial-risk-management/
+├── risk_management.py     # Main application code
+├── test_risk_management.py# Test suite
+├── requirements.txt       # Package dependencies
+└── README.md             # This file
 ```
 
 ## Testing
 
-Run the tests using pytest:
+To run the tests:
 ```bash
 pytest
 ```
 
-## CI/CD
+## CI/CD Pipeline
 
-This project uses GitHub Actions for continuous integration and testing. The workflow will automatically run tests on every push and pull request to the main branch.
+This project uses GitHub Actions for:
+* Code Integration
+* Automated Testing
+* Deployment
+
+The workflow automatically runs on push and pull requests to the main branch.
+
+## Requirements
+
+* Python 3.9+
+* NumPy
+* Pandas
+* pytest
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Run tests
+5. Submit a pull request
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License.
